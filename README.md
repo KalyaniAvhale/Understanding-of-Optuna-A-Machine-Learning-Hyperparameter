@@ -260,7 +260,7 @@ Optuna is vast software framework. This article demonstrates the few simple exam
 6.	[Optuna Official video guide](https://youtu.be/P6NwZVl8ttc) 
 
 
-
+##### Authors : Kalyani Avhale and Siddhi Jadhav
 
 **Your feedback about the article is more than welcomed! Please let us know what you think!**
 
