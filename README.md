@@ -263,5 +263,5 @@ Optuna is vast software framework. This article demonstrates the few simple exam
 
 **Your feedback about the article is more than welcomed! Please let us know what you think!**
 
-Article is available on Medium : [Article](https://medium.com/p/ed31ebb335b9/edit) - Draft 
+## Article is available on Medium : [Article](https://medium.com/p/ed31ebb335b9/edit) - Draft 
 
