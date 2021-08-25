@@ -157,7 +157,7 @@ print("\n\nBEST PARAMETERS : \n",study.best_params)#get best parameters
 ```
 
 * Visualization Plots available in Optuna :
-![image](https://github.com/KalyaniAvhale/Understanding-of-Optuna-A-Machine-Learning-Hyperparameter/blob/main/intro.png)
+![image](https://github.com/KalyaniAvhale/Understanding-of-Optuna-A-Machine-Learning-Hyperparameter/blob/main/Visualization.png)
 
 
 The visualization module provides utility functions for plotting the optimization process using plotly and matplotlib. Plotting functions generally take a study object and optional parameters are passed as a list to the params argument.
