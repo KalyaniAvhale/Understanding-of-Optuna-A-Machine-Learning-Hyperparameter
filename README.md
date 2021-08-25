@@ -39,15 +39,14 @@ Let me now introduce Optuna, an optimization library in Python that can be emplo
 
 
 ### Tuning Hyperparameters with Optuna
-Optuna was developed by the Japanese AI company Preferred Networks, is an open-source automatic hyperparameter optimization framework, automates the trial-and-error process of optimizing the hyperparameters. It automatically finds optimal hyperparameter values based on an optimization target. Optuna is framework agnostic and can be used with most Python frameworks, including keras, Scikit-learn, Pytorch, etc. This framework is mainly designed for machine learning and can be used on non-ML task until unless we can define objective function. Optuna features an imperative, define-by-run style user API. Thanks to our define-by-run API, the code written with Optuna enjoys high modularity, and the user of Optuna can dynamically construct the search spaces for the hyperparameters.
+Optuna was developed by the Japanese AI company [Preferred Networks](https://www.preferred.jp/en/), is an open-source automatic hyperparameter optimization framework, automates the trial-and-error process of optimizing the hyperparameters. It automatically finds optimal hyperparameter values based on an optimization target. Optuna is framework agnostic and can be used with most Python frameworks, including keras, Scikit-learn, Pytorch, etc. This framework is mainly designed for machine learning and can be used on non-ML task until unless we can define objective function. Optuna features an imperative, define-by-run style user API. Thanks to our define-by-run API, the code written with Optuna enjoys high modularity, and the user of Optuna can dynamically construct the search spaces for the hyperparameters.
 
 
 ### Optuna Implementation 
-Link for the complete codes implemented in this article can be found here .
+Link for the complete codes implemented in this article can be found [here](https://github.com/KalyaniAvhale/Understanding-of-Optuna-A-Machine-Learning-Hyperparameter/blob/main/Optuna_Introduction_Non_ML_Task_Demo.ipynb) .
 Optuna architecture is capable of handling both small- and large-scale experiments with minimum setup requirements. Optuna installation in python via pip:
 
 ```!pip install optuna```
-
 
 
 Basic Structure of code implementation with optuna:
@@ -63,7 +62,7 @@ In the image above, import the optuna package, create an objective function with
  
 ### Example 1: Non-ML Task 
 
-Here ‘ll try to demo non-ML task to describe how to use optuna step-by-step.Code Snippet is available here.
+Here ‘ll try to demo non-ML task to describe how to use optuna step-by-step.Code Snippet is available [here](https://github.com/KalyaniAvhale/Understanding-of-Optuna-A-Machine-Learning-Hyperparameter/blob/main/Optuna_Introduction_Non_ML_Task_Demo.ipynb).
 
 ![image](https://github.com/KalyaniAvhale/Understanding-of-Optuna-A-Machine-Learning-Hyperparameter/blob/main/Optimization%20process%20overview%20for%20Non-ML%20task.jpg) 
  
@@ -94,7 +93,7 @@ optuna.trial.Trial.suggest_int() for integer parameters
 optuna.trial.Trial.suggest_float() for floating point parameters
 
 
-We can check more details here .
+We can check more details [here](https://optuna.readthedocs.io/en/stable/tutorial/10_key_features/002_configurations.html#sphx-glr-tutorial-10-key-features-002-configurations-py) .
 
 * Create Study Object and Optimize it: 
 
@@ -128,7 +127,7 @@ study.optimize(objective, n_trials=100)
  
 Fig. Optimization Process Overview for ML task 
 
-1.	Import all the required packages. The code snippet is available here.
+1.	Import all the required packages. The code snippet is available [here](https://github.com/KalyaniAvhale/Understanding-of-Optuna-A-Machine-Learning-Hyperparameter/blob/main/Optuna_Example_on_Heartdisease_Dataset_for_Randomforest_Classifier.ipynb).
 2. Define an objective function with the trial parameter. The objective function should contain the machine learning logic i.e., fit the model on data(heart disease  dataset), predict the test data and return the evaluation score as illustrated below.
 
 
@@ -162,7 +161,7 @@ print("\n\nBEST PARAMETERS : \n",study.best_params)#get best parameters
 
 
 The visualization module provides utility functions for plotting the optimization process using plotly and matplotlib. Plotting functions generally take a study object and optional parameters are passed as a list to the params argument.
-Check here for more detail on visualization for hyperparameter optimization analysis 
+Check [here](https://optuna.readthedocs.io/en/stable/tutorial/10_key_features/005_visualization.html#sphx-glr-tutorial-10-key-features-005-visualization-py) for more detail on visualization for hyperparameter optimization analysis 
 
 ### Efficient Sampling and Pruning 
 
@@ -182,18 +181,18 @@ There are two types of sampling method:
 2.	Independent sampling that samples each parameter independently.
 
 Being an open-source software, Optuna also allows the user to use his/her own customized sampling procedure.
-Check here for more details on various sampling methods. 
+Check [here](https://optuna.readthedocs.io/en/stable/reference/samplers.html) for more details on various sampling methods. 
 
 #### •	Efficient Pruning Algorithm
 Pruning mechanism in general works in two phases. 
 1. periodically monitors the intermediate objective values, and 
 2. terminates the trial that does not meet the predefined condition.
 
-In Optuna, ‘report API’ is responsible for the monitoring functionality, and ‘should prune API’ is responsible for the premature termination of the unpromising trials The background algorithm of ‘should prune’ method is implemented by the family of pruner classes. Check here for more details on pruners.
+In Optuna, ‘report API’ is responsible for the monitoring functionality, and ‘should prune API’ is responsible for the premature termination of the unpromising trials The background algorithm of ‘should prune’ method is implemented by the family of pruner classes. Check [here](https://optuna.readthedocs.io/en/stable/reference/pruners.html) for more details on pruners.
 
 ### Example 3: Implementation of Pruning algorithm with Optuna
 
-Here is the Optuna example that demonstrates a pruner for Keras. In this example, we optimize the validation accuracy of hand-written digit recognition using Keras and MNIST, where the architecture of the neural network and the learning rate of optimizer is optimized. Throughout the training of neural networks, a pruner observes intermediate results and stops unpromising trials. Code Snippet is available here 
+Here is the Optuna example that demonstrates a pruner for Keras. In this example, we optimize the validation accuracy of hand-written digit recognition using Keras and MNIST, where the architecture of the neural network and the learning rate of optimizer is optimized. Throughout the training of neural networks, a pruner observes intermediate results and stops unpromising trials. Code Snippet is available [here](https://github.com/KalyaniAvhale/Understanding-of-Optuna-A-Machine-Learning-Hyperparameter/blob/main/Optuna_Demo_with_Keras_DL_Network.ipynb) 
 
 ```
 def create_model(trial):
@@ -243,7 +242,7 @@ study.optimize(objective, n_trials=15)
 
 ### Summary
 
-Optuna is the first-choice optimization framework. It’s easy to use, makes it possible to set the study’s timeout, continue the study after a break and access the data easily. Optuna can be used in Machine learning Projects with good results. Preferred Network achieved second place in the Google AI Open Images 2018 – Object Detection Track competition.
+Optuna is the first-choice optimization framework. It’s easy to use, makes it possible to set the study’s timeout, continue the study after a break and access the data easily. Optuna can be used in Machine learning Projects with good results. Preferred Network achieved second place in the [Google AI Open Images 2018 – Object Detection Track](https://www.preferred.jp/en/news/pr20180907) competition.
 
 Optuna is vast software framework. This article demonstrates the few simple examples how optuna can be used. You can explore more examples and optuna reference API through their official website and other blogs present on internet.
 
@@ -260,7 +259,7 @@ Optuna is vast software framework. This article demonstrates the few simple exam
 6.	[Optuna Official video guide](https://youtu.be/P6NwZVl8ttc) 
 
 
-##### Authors : Kalyani Avhale and Siddhi Jadhav
+##### Authors : [Kalyani Avhale](https://github.com/KalyaniAvhale) and Siddhi Jadhav
 
 **Your feedback about the article is more than welcomed! Please let us know what you think!**
 
