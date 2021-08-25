@@ -192,7 +192,7 @@ In Optuna, ‘report API’ is responsible for the monitoring functionality, and
 
 ### Example 3: Implementation of Pruning algorithm with Optuna
 
-Here is the Optuna example that demonstrates a pruner for Keras. In this example, we optimize the validation accuracy of hand-written digit recognition using Keras and MNIST, where the architecture of the neural network and the learning rate of optimizer is optimized. Throughout the training of neural networks, a pruner observes intermediate results and stops unpromising trials. Code Snippet is available [here](https://github.com/KalyaniAvhale/Understanding-of-Optuna-A-Machine-Learning-Hyperparameter/blob/main/Optuna_Demo_with_Keras_DL_Network.ipynb) 
+Here is the Optuna example that demonstrates a pruner for Keras. In this example, we optimize the validation accuracy of hand-written digit recognition using Keras and MNIST, where the architecture of the neural network and the learning rate of optimizer is optimized. 
 
 ```
 def create_model(trial):
@@ -219,6 +219,9 @@ def create_model(trial):
 
     return model
 ```
+
+Throughout the training of neural networks, a pruner observes intermediate results and stops unpromising trials. Code Snippet is available [here](https://github.com/KalyaniAvhale/Understanding-of-Optuna-A-Machine-Learning-Hyperparameter/blob/main/Optuna_Demo_with_Keras_DL_Network.ipynb) 
+
 ```
 # The KerasPruningCallback checks for pruning condition every epoch.
     model.fit(
@@ -248,10 +251,9 @@ Optuna is vast software framework. This article demonstrates the few simple exam
 
 
 
-
 ### Reference 
 
-1.	[GitHub](https://github.com/KalyaniAvhale/Understanding-of-Optuna-A-Machine-Learning-Hyperparameter/blob/main/Optuna_Introduction_Non_ML_Task_Demo.ipynb) for Code Snippet implemented in this article 
+1.	[GitHub](https://github.com/KalyaniAvhale/Understanding-of-Optuna-A-Machine-Learning-Hyperparameter) for Code Snippet implemented in this article 
 2.	[Optuna Official Website](https://optuna.readthedocs.io/en/stable/index.html) 
 3.	[sklearn](https://scikit-learn.org/stable/index.html)
 4.	Optuna: A Next-generation Hyperparameter Optimization Framework – [Paper](https://arxiv.org/abs/1907.10902) 
