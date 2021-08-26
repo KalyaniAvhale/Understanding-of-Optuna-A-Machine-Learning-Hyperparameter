@@ -1,4 +1,4 @@
-# Understanding-of-Optuna-A-Machine-Learning-Hyperparameter
+# Understanding-of-Optuna-A-Machine-Learning-Hyperparameter-Optimization-Framework
 
 ![image](https://github.com/KalyaniAvhale/Understanding-of-Optuna-A-Machine-Learning-Hyperparameter/blob/main/intro.png)
 
@@ -263,7 +263,9 @@ Optuna is vast software framework. This article demonstrates the few simple exam
 
 ##### Authors : [Kalyani Avhale](https://github.com/KalyaniAvhale) and Siddhi Jadhav
 
+
+
+#### Article is available on [Medium](https://medium.com/@kalyaniavhale7/understanding-of-optuna-a-machine-learning-hyperparameter-optimization-framework-ed31ebb335b9) 
+
+
 **Your feedback about the article is more than welcomed! Please let us know what you think!**
-
-## Article is available on [Medium](https://medium.com/p/ed31ebb335b9/edit) - Draft 
-
