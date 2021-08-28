@@ -1,4 +1,4 @@
-# Understanding-of-Optuna-A-Machine-Learning-Hyperparameter-Optimization-Framework
+# Understanding of Optuna-A Machine Learning Hyperparameter Optimization Framework
 
 ![image](https://github.com/KalyaniAvhale/Understanding-of-Optuna-A-Machine-Learning-Hyperparameter/blob/main/intro.png)
 
